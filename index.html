@@ -13,6 +13,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- link :CSS-->
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- link:font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- script: for customising font color in the project -->
     <script>
       tailwind.config = {
@@ -32,11 +39,11 @@
       };
     </script>
   </head>
-  <body>
+  <body class="font-inter">
     <!-- Section: header starts -->
     <header class="w-11/12 mx-auto pt-10">
       <!-- *navbar -->
-      <nav class="flex justify-between items-center border-b-2 py-3">
+      <nav class="flex justify-between items-center border-b-2 pb-8">
         <div class="logo w-[175px]">
           <img src="./assets/logoo.png" alt="" />
         </div>
@@ -53,12 +60,37 @@
           </button>
         </div>
       </nav>
+      <!-- *button -->
+      <nav id="category-container" class="py-3 flex gap-5 justify-center"></nav>
     </header>
     <!-- Section: header Ends -->
 
     <!-- Section:main starts -->
-    <main></main>
+    <main>
+      <!-- *vedio starts -->
+      <section
+        id="video-container"
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10"
+      ></section>
+    </main>
     <!-- Section:main ends -->
+
+    <!-- *modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModalData" class="btn" onclick="custom_modal.showModal()">
+      open modal
+    </button>
+    <dialog id="custom_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <!-- section: footer starts -->
     <footer></footer>

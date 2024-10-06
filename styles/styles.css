@@ -1,4 +1,7 @@
-.btn-primary {
-  background-color: aqua;
-  font-size: 20px;
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.active {
+  background-color: red;
+  color: #fff;
 }
